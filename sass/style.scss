@@ -1,0 +1,90 @@
+// variable --------------------------------------------
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$light-gray: #EAEAEA;
+$dark-gray: #353535;
+
+$font-primary: 'Shrikhand', cursive;
+$font-secondary: 'Roboto', sans-serif;
+
+@mixin font-center {
+    text-align: center;
+}
+
+@mixin font-medium {
+    font-weight: 500;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// body --------------------------------------------
+
+body {
+    margin: 0px;
+}
+
+// header --------------------------------------------
+
+.logo {
+    @include center;
+    margin: 20px;
+}
+
+// form --------------------------------------------
+
+.form {
+    @include center;
+    box-shadow: 0 1px 10px gray;
+    background-color: $light-gray;
+    padding: 20px;
+    input {
+        background-color: $light-gray;
+        border: none;
+        width: 130px;
+    }
+    ::placeholder {
+        @include font-center;
+        @include font-medium;
+        font-family: $font-secondary;
+        font-size: 16px;
+        color: $dark-gray;
+    }
+    .fa-solid {
+        color: $dark-gray;
+    }
+}
+
+// Texte principal ----------------------------------------------
+
+.main-text {
+    @include center;
+    @include font-center;
+    font-family: $font-secondary;
+    flex-direction: column;
+    margin-top: 20px;
+    h1 {
+        margin: 20px 60px 0px 60px;
+    }
+    p {
+        font-weight: 300;
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+    button {
+        @include font-medium;
+        border-radius: 50px;
+        padding: 17px 20px;
+        background: linear-gradient($color-secondary, $color-primary);
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-family: $font-secondary;
+        margin: 20px;
+    }
+}
