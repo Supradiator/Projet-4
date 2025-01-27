@@ -46,12 +46,14 @@ body {
   margin: 20px 60px 0px 60px;
 }
 .main-text p {
+  color: #353535;
   font-weight: 300;
   margin: 10px 20px;
   font-size: 18px;
 }
 .main-text button {
   font-weight: 500;
+  margin: 20px;
   border-radius: 50px;
   padding: 17px 20px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -59,5 +61,48 @@ body {
   color: white;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fonctionnement {
   margin: 20px;
+  font-family: "Roboto", sans-serif;
+}
+.fonctionnement .steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.fonctionnement .steps .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.fonctionnement .steps .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-size: 14px;
+}
+.fonctionnement .steps button {
+  background-color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
