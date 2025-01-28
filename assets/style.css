@@ -54,6 +54,7 @@ body {
 .main-text button {
   font-weight: 500;
   margin: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   padding: 17px 20px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -61,11 +62,10 @@ body {
   color: white;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .fonctionnement {
-  margin: 20px;
+  margin: 80px 20px;
   font-family: "Roboto", sans-serif;
 }
 .fonctionnement .steps {
@@ -96,13 +96,82 @@ body {
   font-size: 14px;
 }
 .fonctionnement .steps button {
+  font-weight: 500;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
   font-size: 16px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 90%;
   border-radius: 20px;
+}
+.fonctionnement .steps .fa-solid {
+  position: absolute;
+  left: 50px;
+  color: #7E7E7E;
+}
+
+.cards-title {
+  font-family: "Roboto", sans-serif;
+  padding: 0px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cards .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 251px;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+.cards .card img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+.cards .card .content {
+  height: 30%;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.cards .card .content h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.cards .card .content p {
+  margin: 0;
+  font-weight: 300;
+}
+.cards .card .new {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #008766;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  top: 0px;
+  right: 10px;
+}
+.cards .card .heart {
+  width: 23px;
+  height: 21px;
+  position: absolute;
+  bottom: 33px;
+  right: 20px;
 }/*# sourceMappingURL=style.css.map */
