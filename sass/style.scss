@@ -22,12 +22,28 @@ $font-secondary: 'Roboto', sans-serif;
     margin: 20px;
 }
 
+@mixin no-margin {
+    margin: 0;
+}
+
 @mixin font-center {
     text-align: center;
 }
 
 @mixin font-medium {
     font-weight: 500;
+}
+
+@mixin font-regular {
+    font-weight: 400;
+}
+
+@mixin font-light {
+    font-weight: 300;
+}
+
+@mixin font-sixteen {
+    font-size: 16px;
 }
 
 @mixin center {
@@ -39,7 +55,7 @@ $font-secondary: 'Roboto', sans-serif;
 // body --------------------------------------------
 
 body {
-    margin: 0px;
+    @include no-margin;
 }
 
 // header --------------------------------------------
@@ -64,8 +80,8 @@ body {
     ::placeholder {
         @include font-center;
         @include font-medium;
+        @include font-sixteen;
         font-family: $font-secondary;
-        font-size: 16px;
         color: $dark-gray;
     }
     .fa-solid {
@@ -83,23 +99,24 @@ body {
     margin-top: 20px;
     h1 {
         margin: 20px 60px 0px 60px;
+        font-size: 24px;
     }
     p {
+        @include font-light;
         color: $dark-gray;
-        font-weight: 300;
         margin: 10px 20px;
         font-size: 18px;
     }
     button {
-        @include font-medium;
         @include margin-twenty;
         @include shadow;
+        @include font-sixteen;
+        @include font-regular;
         border-radius: 50px;
         padding: 17px 20px;
         background: linear-gradient($color-secondary, $color-primary);
         border: none;
         color: white;
-        font-size: 16px;
         font-family: $font-secondary;
     }
 }
@@ -107,12 +124,12 @@ body {
 // section fonctionnement --------------------------------------
 
 .fonctionnement {
-    margin: 80px 20px;
+    margin: 80px 0px 80px 20px;
     font-family: $font-secondary;
     .steps {
         @include center;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         .step {
         @include center;
         position: relative;
@@ -132,15 +149,17 @@ body {
         button {
             @include font-medium;
             @include shadow;
+            @include font-sixteen;
             background-color: white;
             border: none;
             font-family: $font-secondary;
-            font-size: 16px;
-            padding: 20px;
+            padding: 25px;
+            margin-bottom: 10px;
             width: 90%;
             border-radius: 20px;
         }
         .fa-solid {
+            font-size: 18px;
             position: absolute;
             left: 50px;
             color: #7E7E7E;
@@ -149,6 +168,10 @@ body {
 }
 
 // Restaurants ---------------------------------------------------------------
+
+.restaurants {
+    padding: 40px 0;;
+}
 
 .cards-title {
     font-family: $font-secondary;
@@ -164,11 +187,15 @@ body {
         width: 90%;
         overflow: hidden;
         border-radius: 15px 15px 0 0;
+        padding-bottom: 10px;
         img {
             height: 70%;
             width: 100%;
             object-fit: cover;
             object-position: bottom;
+        }
+        .charonne {
+            object-position: center -160px;
         }
         .content {
             height: 30%;
@@ -177,13 +204,13 @@ body {
             padding-top: 15px;
             font-family: $font-secondary;
             h4 {
-                margin: 0;
+                @include no-margin;
                 font-size: 18px;
                 font-weight: bold;
             }
             p {
-                margin: 0;
-                font-weight: 300;
+                @include no-margin;
+                @include font-light;
             }
         }
         .new {
@@ -205,5 +232,44 @@ body {
             bottom: 33px;
             right: 20px;
         }
+    }
+}
+
+// Footer ------------------------------------------------------------------------
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-gray;
+    color: white;
+    padding: 20px;
+    .footer-title {
+        padding-bottom: 10px;
+    }
+    h4 {
+        @include font-regular;
+        @include no-margin;
+        font-family: $font-primary;
+        font-size: 18px;
+    }
+    p {
+        @include no-margin;
+        margin-top: 10px;
+        font-family: $font-secondary;
+    }
+    .regular {
+        @include font-regular;
+    }
+    .light {
+        @include font-light;
+    }
+    .fa-solid {
+        font-size: 13px;
+    }
+    .fa-utensils  {
+        padding-right: 15px;
+    }
+    .fa-handshake-angle {
+        padding-right: 10px;
     }
 }

@@ -1,5 +1,5 @@
 body {
-  margin: 0px;
+  margin: 0;
 }
 
 .logo {
@@ -25,8 +25,8 @@ body {
 .form ::placeholder {
   text-align: center;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
   color: #353535;
 }
 .form .fa-solid {
@@ -44,28 +44,29 @@ body {
 }
 .main-text h1 {
   margin: 20px 60px 0px 60px;
+  font-size: 24px;
 }
 .main-text p {
-  color: #353535;
   font-weight: 300;
+  color: #353535;
   margin: 10px 20px;
   font-size: 18px;
 }
 .main-text button {
-  font-weight: 500;
   margin: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 400;
   border-radius: 50px;
   padding: 17px 20px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   color: white;
-  font-size: 16px;
   font-family: "Roboto", sans-serif;
 }
 
 .fonctionnement {
-  margin: 80px 20px;
+  margin: 80px 0px 80px 20px;
   font-family: "Roboto", sans-serif;
 }
 .fonctionnement .steps {
@@ -73,7 +74,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
 }
 .fonctionnement .steps .step {
   display: flex;
@@ -98,18 +99,24 @@ body {
 .fonctionnement .steps button {
   font-weight: 500;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
   background-color: white;
   border: none;
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  padding: 20px;
+  padding: 25px;
+  margin-bottom: 10px;
   width: 90%;
   border-radius: 20px;
 }
 .fonctionnement .steps .fa-solid {
+  font-size: 18px;
   position: absolute;
   left: 50px;
   color: #7E7E7E;
+}
+
+.restaurants {
+  padding: 40px 0;
 }
 
 .cards-title {
@@ -133,12 +140,16 @@ body {
   width: 90%;
   overflow: hidden;
   border-radius: 15px 15px 0 0;
+  padding-bottom: 10px;
 }
 .cards .card img {
   height: 70%;
   width: 100%;
   object-fit: cover;
   object-position: bottom;
+}
+.cards .card .charonne {
+  object-position: center -160px;
 }
 .cards .card .content {
   height: 30%;
@@ -174,4 +185,41 @@ body {
   position: absolute;
   bottom: 33px;
   right: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+}
+.footer .footer-title {
+  padding-bottom: 10px;
+}
+.footer h4 {
+  font-weight: 400;
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+}
+.footer p {
+  margin: 0;
+  margin-top: 10px;
+  font-family: "Roboto", sans-serif;
+}
+.footer .regular {
+  font-weight: 400;
+}
+.footer .light {
+  font-weight: 300;
+}
+.footer .fa-solid {
+  font-size: 13px;
+}
+.footer .fa-utensils {
+  padding-right: 15px;
+}
+.footer .fa-handshake-angle {
+  padding-right: 10px;
 }/*# sourceMappingURL=style.css.map */
