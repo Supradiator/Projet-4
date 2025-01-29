@@ -63,6 +63,11 @@ body {
   border: none;
   color: white;
   font-family: "Roboto", sans-serif;
+  transition: box-shadow 400ms;
+}
+.main-text button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .fonctionnement {
@@ -113,6 +118,9 @@ body {
   position: absolute;
   left: 50px;
   color: #7E7E7E;
+}
+.fonctionnement .steps .fa-store {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -179,12 +187,30 @@ body {
   top: 0px;
   right: 10px;
 }
-.cards .card .heart {
-  width: 23px;
-  height: 21px;
+.cards .card .toggle-checkbox {
+  display: none;
+}
+.cards .card .toggle-label {
+  font-size: 22px;
+  position: relative;
+}
+.cards .card .toggle-label i {
   position: absolute;
+  left: 130px;
   bottom: 33px;
-  right: 20px;
+  transition: opacity 0.4s;
+}
+.cards .card .heart-filled {
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
+}
+.cards .card .toggle-checkbox:checked + .toggle-label .heart-empty {
+  opacity: 0;
+}
+.cards .card .toggle-checkbox:checked + .toggle-label .heart-filled {
+  opacity: 1;
 }
 
 .footer {
