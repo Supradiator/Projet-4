@@ -67,7 +67,7 @@ body {
 }
 .main-text button:hover {
   background: linear-gradient(#ff93e1, #a16be0);
-  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
 }
 
 .fonctionnement {
@@ -248,4 +248,32 @@ body {
 }
 .footer .fa-handshake-angle {
   padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin: 30px 20px;
+  }
+  .form {
+    box-shadow: none;
+    padding: 15px 20px;
+  }
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .main-text button {
+    padding: 15px 25px;
+  }
+  .steps {
+    flex-direction: row !important;
+  }
+  .steps .step {
+    flex: 1;
+    max-width: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
