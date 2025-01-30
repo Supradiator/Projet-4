@@ -312,7 +312,7 @@ body {
         padding: 15px 20px;
     }
     main {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
     }
     .main-text {
@@ -326,9 +326,71 @@ body {
     }
     .steps {
         flex-direction: row !important;
+        justify-content: space-between !important;
+        .circle {
+            left: -10px !important;
+        }
+        .fa-solid {
+            left: 30px !important;
+            font-size: 20px !important;
+        }
        .step {
         flex: 1;
         max-width: 30%;
+        button {
+            width: 100%;
+        }
        }
     }
-}
+    .restaurants {
+        padding-left: 15px;
+        padding-top: 0px;
+    }
+    .cards-title {
+        padding-left: 0px;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        .card {
+            width: 45%;
+            img {
+                object-position: center -100px;
+            }
+            .charonne {
+                object-position: center -240px;
+            }
+        }
+    }
+    .toggle-label {
+        left: 50px !important;
+    }
+    .footer {
+        flex-direction: row-reverse;
+        h4 {
+            padding: 40px 40px 0px 50px;
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: row;
+        }
+        .regular {
+            display: flex;
+            flex-direction: row;
+            padding-right: 20px;
+            p {
+                padding: 40px 5px 0px 5px;
+            }
+        }
+        .light {
+            display: flex;
+            flex-direction: row;
+            padding-right: 20px;
+            p {
+                padding: 40px 5px 0px 5px;
+            }
+        }
+    }
+}   
