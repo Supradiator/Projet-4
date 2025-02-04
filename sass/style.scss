@@ -5,6 +5,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $light-gray: #EAEAEA;
 $dark-gray: #353535;
+$background: #F6F6F6;
 
 $font-primary: 'Shrikhand', cursive;
 $font-secondary: 'Roboto', sans-serif;
@@ -63,15 +64,25 @@ body {
 .logo {
     @include center;
     @include margin-twenty;
+
+    @media(min-width: 768px){
+        margin: 30px 20px;
+    }
 }
 
 // form --------------------------------------------
 
 .form {
     @include center;
-    box-shadow: 0 1px 10px gray;
+    box-shadow: inset 0 23px 4px -20px rgba(0,0,0,0.1);
     background-color: $light-gray;
     padding: 20px;
+
+    @media(min-width: 768px){
+        box-shadow: none;
+        padding: 15px 20px;
+    }
+
     input {
         background-color: $light-gray;
         border: none;
@@ -94,12 +105,23 @@ body {
 .main-text {
     @include center;
     @include font-center;
+    box-shadow: inset 0 30px 4px -25px rgba(0,0,0,0.2);
+    background-color: $background;
     font-family: $font-secondary;
     flex-direction: column;
-    margin-top: 20px;
+    padding: 20px 0px 40px 0px;
+
+    @media(min-width: 768px){
+        box-shadow: none;
+    }
     h1 {
         margin: 20px 60px 0px 60px;
         font-size: 24px;
+
+        @media(min-width: 768px){
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
     }
     p {
         @include font-light;
@@ -123,141 +145,216 @@ body {
             background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
             box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
         }
+
+        @media(min-width: 768px){
+            padding: 15px 25px;
+        }
     }
 }
 
 // section fonctionnement --------------------------------------
 
-.fonctionnement {
-    margin: 80px 0px 80px 20px;
-    font-family: $font-secondary;
-    .steps {
+.section-fonctionnement {
+
+    @media(min-width: 768px){
         @include center;
-        flex-direction: column;
-        gap: 25px;
-        .step {
-        @include center;
-        position: relative;
-        width: 100%;
+    }
+    .div-fonctionnement {
+        margin: 50px 0px 50px 20px;
+        font-family: $font-secondary;
+
+        @media(min-width: 768px){
+            width: 60%;
         }
-        .circle {
+        .steps {
             @include center;
-            position: absolute;
-            left: 5px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: $color-primary;
-            color: white;
-            font-size: 14px;
-        }
-        button {
-            @include font-medium;
-            @include shadow;
-            @include font-sixteen;
-            background-color: white;
-            border: none;
-            font-family: $font-secondary;
-            padding: 25px;
-            margin-bottom: 10px;
-            width: 90%;
-            border-radius: 20px;
-        }
-        .fa-solid {
-            font-size: 18px;
-            position: absolute;
-            left: 50px;
-            color: #7E7E7E;
-        }
-        .fa-store {
-            color: $color-primary;
+            flex-direction: column;
+            gap: 25px;
+
+            @media(min-width: 768px){
+                flex-direction: row;
+                gap: 40px;
+            }
+            .step {
+            @include center;
+            position: relative;
+            width: 100%;
+
+            @media(min-width: 768px){
+                flex: 1;
+                max-width: 30%;
+            }
+            }
+            .circle {
+                @include center;
+                position: absolute;
+                left: 5px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background-color: $color-primary;
+                color: white;
+                font-size: 14px;
+
+                @media(min-width: 768px){
+                    left: -15px;
+                }
+            }
+            button {
+                @include font-medium;
+                @include shadow;
+                @include font-sixteen;
+                background-color: $background;
+                border: none;
+                font-family: $font-secondary;
+                padding: 25px;
+                margin-bottom: 10px;
+                width: 90%;
+                border-radius: 20px;
+
+                @media(min-width: 768px){
+                    width: 100%;
+                }
+            }
+            .fa-solid {
+                font-size: 18px;
+                position: absolute;
+                left: 50px;
+                color: #7E7E7E;
+
+                @media(min-width: 768px){
+                    left: 30px;
+                    font-size: 20px;
+                }
+            }
+            .fa-store {
+                color: $color-primary;
+            }
         }
     }
 }
-
 // Restaurants ---------------------------------------------------------------
+.section-restaurants {
 
-.restaurants {
-    padding: 40px 0;;
-}
+    @media(min-width: 768px){
+        background-color: $background;
+        @include center;
+    }
+    .div-restaurants {
+        padding: 40px 0px;
+        background-color: $background;
 
-.cards-title {
-    font-family: $font-secondary;
-    padding: 0px 20px;
-}
-
-.cards {
-    @include column-center;
-    .card {
-        position: relative;
-        @include column-center;
-        height: 251px;
-        width: 90%;
-        overflow: hidden;
-        border-radius: 15px 15px 0 0;
-        padding-bottom: 10px;
-        img {
-            height: 70%;
-            width: 100%;
-            object-fit: cover;
-            object-position: bottom;
+        @media(min-width: 768px){
+            padding-left: 15px;
+            padding-top: 0px;
+            width: 60%;
         }
-        .charonne {
-            object-position: center -160px;
-        }
-        .content {
-            height: 30%;
-            width: 100%;
-            padding-left: 20px;
-            padding-top: 15px;
+        .cards-title {
             font-family: $font-secondary;
-            h4 {
-                @include no-margin;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            p {
-                @include no-margin;
-                @include font-light;
+            padding: 0px 20px;
+
+            @media(min-width: 768px){
+                padding-left: 0px;
             }
         }
-        .new {
-            position: absolute;
-            background-color: #99E2D0;
-            color: #008766;
-            font-family: $font-secondary;
-            @include font-medium;
-            font-size: 14px;
-            padding: 5px 10px;
-            border-radius: 3px;
-            top: 0px;
-            right: 10px;
-        }
-        // animation du coeur-----------------------------------------
-        .toggle-checkbox {
-            display: none;
-        }
-        .toggle-label {
-            font-size: 22px;
-            position: relative;
-            i {
-                position: absolute;
-                left: 130px;
-                bottom: 33px;
-                transition: opacity 0.4s
+        .cards {
+            @include column-center;
+            gap: 20px;
+
+            @media(min-width: 768px){
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
             }
-        }
-        .heart-filled {
-            opacity: 0;
-            background: linear-gradient($color-primary, $color-secondary);
-            background-clip: text;
-            color: transparent;
-        }
-        .toggle-checkbox:checked + .toggle-label .heart-empty {
-            opacity: 0;
-        }
-        .toggle-checkbox:checked + .toggle-label .heart-filled {
-            opacity: 1;
+            .card {
+                position: relative;
+                @include column-center;
+                background-color: white;
+                height: 251px;
+                width: 90%;
+                overflow: hidden;
+                border-radius: 15px;
+
+                @media(min-width: 768px){
+                    width: 45%;
+                }
+                img {
+                    height: 70%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: bottom;
+
+                    @media(min-width: 768px){
+                        object-position: center -100px;
+                    }
+                }
+                .charonne {
+                    object-position: center -160px;
+
+                    @media(min-width: 768px){
+                        object-position: center -240px;
+                    }
+                }
+                .content {
+                    height: 30%;
+                    width: 100%;
+                    padding-left: 20px;
+                    padding-top: 15px;
+                    font-family: $font-secondary;
+                    h4 {
+                        @include no-margin;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    p {
+                        @include no-margin;
+                        @include font-light;
+                    }
+                }
+                .new {
+                    position: absolute;
+                    background-color: #99E2D0;
+                    color: #008766;
+                    font-family: $font-secondary;
+                    @include font-medium;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    border-radius: 3px;
+                    top: 0px;
+                    right: 10px;
+                }
+                // animation du coeur-----------------------------------------
+                .toggle-checkbox {
+                    display: none;
+                }
+                .toggle-label {
+                    font-size: 22px;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        left: 130px;
+                        bottom: 33px;
+                        transition: opacity 0.4s
+                    }
+
+                    @media(min-width: 768px){
+                        left: 50px;
+                    }
+                }
+                .heart-filled {
+                    opacity: 0;
+                    background: linear-gradient($color-primary, $color-secondary);
+                    background-clip: text;
+                    color: transparent;
+                }
+                .toggle-checkbox:checked + .toggle-label .heart-empty {
+                    opacity: 0;
+                }
+                .toggle-checkbox:checked + .toggle-label .heart-filled {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
@@ -270,6 +367,17 @@ body {
     background-color: $dark-gray;
     color: white;
     padding: 20px;
+
+    @media(min-width: 768px){
+        flex-direction: row-reverse;
+    }
+    .footer-content {
+
+        @media(min-width: 768px){
+            display: flex;
+            flex-direction: row;
+        }
+    }
     .footer-title {
         padding-bottom: 10px;
     }
@@ -278,6 +386,10 @@ body {
         @include no-margin;
         font-family: $font-primary;
         font-size: 18px;
+
+        @media(min-width: 768px){
+            padding: 40px 40px 0px 50px;
+        }
     }
     p {
         @include no-margin;
@@ -286,9 +398,27 @@ body {
     }
     .regular {
         @include font-regular;
+
+        @media(min-width: 768px){
+            display: flex;
+            flex-direction: row;
+            padding-right: 20px;
+            p {
+                padding: 40px 5px 0px 5px;
+            }
+        }
     }
     .light {
         @include font-light;
+
+        @media(min-width: 768px){
+            display: flex;
+            flex-direction: row;
+            padding-right: 20px;
+            p {
+                padding: 40px 5px 0px 5px;
+            }
+        }
     }
     .fa-solid {
         font-size: 13px;
@@ -300,97 +430,3 @@ body {
         padding-right: 10px;
     }
 }
-
-// Media query-----------------------------------------------------------------------
-
-@media(min-width: 768px) {
-    .logo {
-        margin: 30px 20px;
-    }
-    .form {
-        box-shadow: none;
-        padding: 15px 20px;
-    }
-    main {
-        width: 70%;
-        margin: 0 auto;
-    }
-    .main-text {
-        h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        button {
-            padding: 15px 25px;
-        }
-    }
-    .steps {
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        .circle {
-            left: -10px !important;
-        }
-        .fa-solid {
-            left: 30px !important;
-            font-size: 20px !important;
-        }
-       .step {
-        flex: 1;
-        max-width: 30%;
-        button {
-            width: 100%;
-        }
-       }
-    }
-    .restaurants {
-        padding-left: 15px;
-        padding-top: 0px;
-    }
-    .cards-title {
-        padding-left: 0px;
-    }
-    .cards {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        .card {
-            width: 45%;
-            img {
-                object-position: center -100px;
-            }
-            .charonne {
-                object-position: center -240px;
-            }
-        }
-    }
-    .toggle-label {
-        left: 50px !important;
-    }
-    .footer {
-        flex-direction: row-reverse;
-        h4 {
-            padding: 40px 40px 0px 50px;
-        }
-        .footer-content {
-            display: flex;
-            flex-direction: row;
-        }
-        .regular {
-            display: flex;
-            flex-direction: row;
-            padding-right: 20px;
-            p {
-                padding: 40px 5px 0px 5px;
-            }
-        }
-        .light {
-            display: flex;
-            flex-direction: row;
-            padding-right: 20px;
-            p {
-                padding: 40px 5px 0px 5px;
-            }
-        }
-    }
-}   
