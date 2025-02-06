@@ -235,6 +235,13 @@ body {
     width: 100%;
   }
 }
+.section-restaurants .div-restaurants .cards .menu-link {
+  position: absolute;
+  inset: 0;
+  text-decoration: none;
+  color: inherit;
+  z-index: 10;
+}
 .section-restaurants .div-restaurants .cards .card {
   position: relative;
   display: flex;
@@ -274,7 +281,7 @@ body {
 .section-restaurants .div-restaurants .cards .card .content {
   height: 30%;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 10px;
   padding-top: 15px;
   font-family: "Roboto", sans-serif;
 }
@@ -308,8 +315,8 @@ body {
 }
 .section-restaurants .div-restaurants .cards .card .toggle-label i {
   position: absolute;
-  left: 130px;
-  bottom: 33px;
+  left: 300px;
+  bottom: 50px;
   transition: opacity 0.4s;
 }
 @media (min-width: 768px) {
@@ -401,4 +408,4 @@ body {
 }
 .footer .fa-handshake-angle {
   padding-right: 10px;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
