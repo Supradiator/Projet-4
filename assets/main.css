@@ -321,7 +321,7 @@ body {
 }
 @media (min-width: 768px) {
   .section-restaurants .div-restaurants .cards .card .toggle-label {
-    left: 50px;
+    left: 150px;
   }
 }
 .section-restaurants .div-restaurants .cards .card .heart-filled {

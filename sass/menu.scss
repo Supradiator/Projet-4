@@ -11,6 +11,13 @@ $dark-gray: #353535;
 $background: #F6F6F6;
 $light-green: #99E2D0;
 
+@mixin background-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 275px;
+}
+
 @mixin column-center {
     @include center;
     flex-direction: column;
@@ -84,12 +91,21 @@ body {
 
 // image du menu----------------------------------------------------------
 
-.image-menu {
+.a-la-francaise {
+    @include background-image;
+    background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.la-note-enchantee {
+    @include background-image;
+    background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.la-palette-du-gout {
+    @include background-image;
     background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 275px;
+}
+.le-delice-des-sens {
+    @include background-image;
+    background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 // menu-------------------------------------------------------------------------
@@ -160,6 +176,7 @@ body {
             width: 92%;
             border-radius: 15px;
             padding: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             h4 {
                 margin: 0px 0px 5px 0px;
             }
