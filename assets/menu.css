@@ -20,6 +20,12 @@ body {
   left: 20px;
   top: 30px;
 }
+@media (min-width: 768px) {
+  .fa-arrow-left {
+    top: 40px;
+    font-size: 20px;
+  }
+}
 
 .return {
   text-decoration: none;
@@ -33,6 +39,12 @@ body {
   height: 275px;
   background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
+@media (min-width: 768px) {
+  .a-la-francaise {
+    height: 500px;
+    background-position: center -450px;
+  }
+}
 
 .la-note-enchantee {
   background-size: cover;
@@ -40,6 +52,12 @@ body {
   width: 100%;
   height: 275px;
   background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+@media (min-width: 768px) {
+  .la-note-enchantee {
+    height: 500px;
+    background-position: center;
+  }
 }
 
 .la-palette-du-gout {
@@ -49,6 +67,12 @@ body {
   height: 275px;
   background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
+@media (min-width: 768px) {
+  .la-palette-du-gout {
+    height: 500px;
+    background-position: center -450px;
+  }
+}
 
 .le-delice-des-sens {
   background-size: cover;
@@ -57,6 +81,12 @@ body {
   height: 275px;
   background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
+@media (min-width: 768px) {
+  .le-delice-des-sens {
+    height: 500px;
+    background-position: center -450px;
+  }
+}
 
 .menu {
   background-color: #F6F6F6;
@@ -64,11 +94,22 @@ body {
   margin-top: -55px;
   padding-top: 10px;
 }
+@media (min-width: 768px) {
+  .menu {
+    padding: 10px 250px 0px 250px;
+    margin: -50px 250px 0px 250px;
+  }
+}
 .menu .title {
   font-family: "Shrikhand", cursive;
   font-weight: lighter;
   font-size: 28px;
   padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .menu .title {
+    text-align: center;
+  }
 }
 .menu .toggle-checkbox {
   display: none;
@@ -85,7 +126,7 @@ body {
 }
 @media (min-width: 768px) {
   .menu .toggle-label {
-    left: 50px;
+    left: 280px;
   }
 }
 .menu .heart-filled {
@@ -129,6 +170,11 @@ body {
 .plats .plats-card .card h4 {
   margin: 0px 0px 5px 0px;
 }
+@media (min-width: 768px) {
+  .plats .plats-card .card h4 {
+    font-size: 18px;
+  }
+}
 .plats .plats-card .card p {
   margin: 0;
   font-weight: 300;
@@ -141,6 +187,11 @@ body {
   color: #353535;
   font-weight: bold;
   font-size: 15px;
+}
+@media (min-width: 768px) {
+  .plats .plats-card .card .prix {
+    left: 790px;
+  }
 }
 
 .commander {
@@ -167,7 +218,7 @@ body {
 }
 @media (min-width: 768px) {
   .commander button {
-    padding: 15px 25px;
+    padding: 15px 40px;
   }
 }
 
