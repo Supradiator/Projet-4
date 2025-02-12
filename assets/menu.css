@@ -167,6 +167,7 @@ body {
   padding: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  overflow: hidden;
 }
 .plats .plats-card .card .card-checkbox {
   display: none;
@@ -177,45 +178,52 @@ body {
 }
 .plats .plats-card .card .selection {
   position: absolute;
+  transform: translateX(70px);
+  transition: transform 330ms ease-out;
+  width: 59px;
+  margin: -15px -15px -15px 10px;
+  border-radius: 0 15px 15px 0;
 }
 .plats .plats-card .card .selection .fa-circle-check {
   color: transparent;
 }
-.plats .plats-card .card .card-checkbox:checked + .card-content .selection {
+.plats .plats-card .card .card-checkbox:checked ~ .card-content .selection {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #99E2D0;
-  width: 20%;
-  margin: -15px;
-  border-radius: 0 15px 15px 0;
-  padding-left: 0px;
-  transition: margin 0.9s;
+  transform: translateX(0px);
+  transition: transform 330ms;
 }
-.plats .plats-card .card .card-checkbox:checked + .card-content .selection .fa-circle-check {
+.plats .plats-card .card .card-checkbox:checked ~ .card-content .selection .fa-circle-check {
   align-self: center;
   color: white;
   font-size: 20px;
 }
-.plats .plats-card .card h4 {
+.plats .plats-card .card .card-checkbox:not(:checked) ~ .card-content .selection {
+  transform: translateX(70px);
+  transition: transform 330ms;
+}
+.plats .plats-card h4 {
   margin: 0px 0px 5px 0px;
 }
 @media (min-width: 768px) {
-  .plats .plats-card .card h4 {
+  .plats .plats-card h4 {
     font-size: 18px;
   }
 }
-.plats .plats-card .card p {
+.plats .plats-card p {
   margin: 0;
   font-weight: 300;
   font-size: 15px;
 }
-.plats .plats-card .card .prix {
+.plats .plats-card .prix {
   color: #353535;
   font-weight: bold;
   font-size: 15px;
   align-self: flex-end;
+  margin-left: auto;
 }
 .commander {
   display: flex;

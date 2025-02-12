@@ -207,6 +207,7 @@ body {
             padding: 15px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
+            overflow: hidden;
             .card-checkbox {
                 display: none;
             }
@@ -216,30 +217,37 @@ body {
             }
             .selection {
                 position: absolute;
+                transform: translateX(70px);
+                transition: transform 330ms ease-out;
+                width: 59px;
+                margin: -15px -15px -15px 10px;
+                border-radius: 0 15px 15px 0;
                 .fa-circle-check {
                     color: transparent;
                 }
             }
-            .card-checkbox:checked + .card-content {
-                .selection {
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    background-color: $light-green;
-                    width: 20%;
-                    margin: -15px;
-                    border-radius: 0 15px 15px 0;
-                    padding-left: 0px;
-                    transition: margin 0.9s;
-                    .fa-circle-check {
-                        align-self: center;
-                        color: white;
-                        font-size: 20px;
-                    }
+            
+            .card-checkbox:checked ~ .card-content .selection {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: $light-green;
+                transform: translateX(0px);
+                transition: transform 330ms;
+                .fa-circle-check {
+                    align-self: center;
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+
+            .card-checkbox:not(:checked) ~ .card-content .selection {
+                    transform: translateX(70px);
+                    transition: transform 330ms;
             }
             
-            }
+        }
             h4 {
                 margin: 0px 0px 5px 0px;
 
@@ -257,12 +265,12 @@ body {
                 font-weight: bold;
                 font-size: 15px;
                 align-self: flex-end;
+                margin-left: auto;
 
                 @media(min-width: 768px){
-                    
+                 
                 }
             }
-        }
     }
 }
 .commander {
