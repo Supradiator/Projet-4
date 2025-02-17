@@ -243,8 +243,13 @@ body {
             }
 
             .card-checkbox:not(:checked) ~ .card-content .selection {
-                    transform: translateX(70px);
-                    transition: transform 330ms;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: $light-green;
+                transform: translateX(70px);
+                transition: transform 3330ms;
             }
             
         }

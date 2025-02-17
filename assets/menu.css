@@ -202,8 +202,13 @@ body {
   font-size: 20px;
 }
 .plats .plats-card .card .card-checkbox:not(:checked) ~ .card-content .selection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #99E2D0;
   transform: translateX(70px);
-  transition: transform 330ms;
+  transition: transform 3330ms;
 }
 .plats .plats-card h4 {
   margin: 0px 0px 5px 0px;
