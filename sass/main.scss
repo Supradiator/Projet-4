@@ -107,7 +107,7 @@ body {
     @include center;
     @include margin-twenty;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         margin: 30px 20px;
     }
 }
@@ -120,7 +120,7 @@ body {
     background-color: $light-gray;
     padding: 20px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         box-shadow: none;
         padding: 15px 20px;
     }
@@ -153,14 +153,14 @@ body {
     flex-direction: column;
     padding: 20px 0px 40px 0px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         box-shadow: none;
     }
     h1 {
         margin: 20px 60px 0px 60px;
         font-size: 24px;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             font-size: 40px;
             margin-bottom: 15px;
         }
@@ -188,7 +188,7 @@ body {
             box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
         }
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             padding: 15px 25px;
         }
     }
@@ -198,14 +198,14 @@ body {
 
 .section-fonctionnement {
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         @include center;
     }
     .div-fonctionnement {
         margin: 50px 0px 50px 20px;
         font-family: $font-secondary;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             width: 60%;
         }
         .steps {
@@ -213,7 +213,7 @@ body {
             flex-direction: column;
             gap: 25px;
 
-            @media(min-width: 768px){
+            @media(min-width: 1024px){
                 flex-direction: row;
                 gap: 40px;
             }
@@ -222,7 +222,7 @@ body {
             position: relative;
             width: 100%;
 
-            @media(min-width: 768px){
+            @media(min-width: 1024px){
                 flex: 1;
                 max-width: 30%;
             }
@@ -238,7 +238,7 @@ body {
                 color: white;
                 font-size: 14px;
 
-                @media(min-width: 768px){
+                @media(min-width: 1024px){
                     left: -15px;
                 }
             }
@@ -254,7 +254,7 @@ body {
                 width: 90%;
                 border-radius: 20px;
 
-                @media(min-width: 768px){
+                @media(min-width: 1024px){
                     width: 100%;
                 }
             }
@@ -264,7 +264,7 @@ body {
                 left: 50px;
                 color: #7E7E7E;
 
-                @media(min-width: 768px){
+                @media(min-width: 1024px){
                     left: 30px;
                     font-size: 20px;
                 }
@@ -278,7 +278,7 @@ body {
 // Restaurants ---------------------------------------------------------------
 .section-restaurants {
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         background-color: $background;
         @include center;
     }
@@ -286,7 +286,7 @@ body {
         padding: 40px 0px;
         background-color: $background;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             padding-left: 15px;
             padding-top: 0px;
             width: 60%;
@@ -295,7 +295,7 @@ body {
             font-family: $font-secondary;
             padding: 0px 20px;
 
-            @media(min-width: 768px){
+            @media(min-width: 1024px){
                 padding-left: 0px;
             }
         }
@@ -303,7 +303,7 @@ body {
             @include column-center;
             gap: 20px;
 
-            @media(min-width: 768px){
+            @media(min-width: 1024px){
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -325,7 +325,7 @@ body {
                 overflow: hidden;
                 border-radius: 15px;
 
-                @media(min-width: 768px){
+                @media(min-width: 1024px){
                     width: 45%;
                 }
                 img {
@@ -334,14 +334,14 @@ body {
                     object-fit: cover;
                     object-position: bottom;
 
-                    @media(min-width: 768px){
+                    @media(min-width: 1024px){
                         object-position: center -100px;
                     }
                 }
                 .charonne {
                     object-position: center -160px;
 
-                    @media(min-width: 768px){
+                    @media(min-width: 1024px){
                         object-position: center -240px;
                     }
                 }
@@ -387,7 +387,7 @@ body {
                         transition: opacity 0.4s
                     }
 
-                    @media(min-width: 768px){
+                    @media(min-width: 1024px){
                         left: 150px;
                     }
                 }
@@ -417,12 +417,12 @@ body {
     color: white;
     padding: 20px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         flex-direction: row-reverse;
     }
     .footer-content {
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
         }
@@ -436,7 +436,7 @@ body {
         font-family: $font-primary;
         font-size: 18px;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             padding: 40px 40px 0px 50px;
         }
     }
@@ -448,7 +448,7 @@ body {
     .regular {
         @include font-regular;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
             padding-right: 20px;
@@ -460,7 +460,7 @@ body {
     .light {
         @include font-light;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
             padding-right: 20px;

@@ -12,7 +12,7 @@ $background: #F6F6F6;
 $light-green: #99E2D0;
 
 @mixin desktop-image {
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         height: 500px;
         background-position: center -450px;
     }
@@ -80,7 +80,7 @@ body {
     @include center;
     @include margin-twenty;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         margin: 30px 20px;
     }
 }
@@ -90,7 +90,7 @@ body {
     left: 20px;
     top: 30px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         top: 40px;
         font-size: 20px;
     }
@@ -112,7 +112,7 @@ body {
     @include background-image;
     background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         height: 500px;
         background-position: center;
     }
@@ -136,7 +136,7 @@ body {
     margin-top: -55px;
     padding-top: 10px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         padding: 10px 250px 0px 250px;
         margin: -50px 250px 0px 250px;
     }
@@ -146,7 +146,7 @@ body {
         font-size: 28px;
         padding: 0 15px;
         
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             text-align: center;
         }
     }
@@ -166,7 +166,7 @@ body {
             transition: opacity 0.4s
         }
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             left: 280px;
         }
     }
@@ -183,6 +183,8 @@ body {
         opacity: 1;
     }
 }
+
+// plats-------------------------------------------------------------------------
 
 .plats {
     font-family: $font-secondary;
@@ -227,7 +229,39 @@ body {
                 }
             }
             
-            .card-checkbox:checked ~ .card-content .selection {
+            
+        }
+        .texte {
+            width: 100%;
+        }
+        h4 {
+            margin: 0px 0px 5px 0px;
+            font-size: 18px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        p {
+            @include no-margin;
+            @include font-light;
+            font-size: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .prix {
+            color: $dark-gray;
+            font-weight: bold;
+            font-size: 15px;
+            align-self: flex-end;
+            margin-left: auto;
+            position: absolute;
+            left: 320px;
+        }
+        .card-checkbox:checked ~ .card-content {
+            .selection {
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -241,41 +275,32 @@ body {
                     font-size: 20px;
                 }
             }
-
-            .card-checkbox:not(:checked) ~ .card-content .selection {
+            h4 {
+                max-width: 80%;
+            }
+            p {
+                max-width: 80%;
+            }
+            .prix {
+                transform: translateX(-50px);
+                transition: transform 330ms;
+            }
+        }
+        .card-checkbox:not(:checked) ~ .card-content {
+            .selection {
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 background-color: $light-green;
                 transform: translateX(70px);
-                transition: transform 3330ms;
-            }
-            
-        }
-            h4 {
-                margin: 0px 0px 5px 0px;
-
-                @media(min-width: 768px){
-                    font-size: 18px;
-                }
-            }
-            p {
-                @include no-margin;
-                @include font-light;
-                font-size: 15px;
+                transition: transform 330ms;
             }
             .prix {
-                color: $dark-gray;
-                font-weight: bold;
-                font-size: 15px;
-                align-self: flex-end;
-                margin-left: auto;
-
-                @media(min-width: 768px){
-                 
-                }
+                transform: translateX(0px);
+                transition: transform 330ms;
             }
+        }
     }
 }
 .commander {
@@ -297,7 +322,7 @@ body {
             box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
         }
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             padding: 15px 40px;
         }
     }
@@ -312,12 +337,12 @@ body {
     color: white;
     padding: 20px;
 
-    @media(min-width: 768px){
+    @media(min-width: 1024px){
         flex-direction: row-reverse;
     }
     .footer-content {
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
         }
@@ -331,7 +356,7 @@ body {
         font-family: $font-primary;
         font-size: 18px;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             padding: 40px 40px 0px 50px;
         }
     }
@@ -343,7 +368,7 @@ body {
     .regular {
         @include font-regular;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
             padding-right: 20px;
@@ -355,7 +380,7 @@ body {
     .light {
         @include font-light;
 
-        @media(min-width: 768px){
+        @media(min-width: 1024px){
             display: flex;
             flex-direction: row;
             padding-right: 20px;
