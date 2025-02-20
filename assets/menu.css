@@ -94,6 +94,12 @@ body {
   margin-top: -55px;
   padding-top: 10px;
 }
+@media (min-width: 768px) {
+  .menu {
+    padding: 10px 50px 0px 50px;
+    margin: -50px 50px 0px 50px;
+  }
+}
 @media (min-width: 1024px) {
   .menu {
     padding: 10px 250px 0px 250px;
@@ -142,6 +148,26 @@ body {
   opacity: 1;
 }
 
+.un {
+  opacity: 0;
+  animation: appear 1000ms forwards;
+}
+
+.deux {
+  opacity: 0;
+  animation: appear 2000ms forwards;
+}
+
+.trois {
+  opacity: 0;
+  animation: appear 3000ms forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
 .plats {
   font-family: "Roboto", sans-serif;
   padding: 0px 15px;
@@ -215,6 +241,16 @@ body {
   margin-left: auto;
   position: absolute;
   left: 320px;
+}
+@media (min-width: 768px) {
+  .plats .plats-card .prix {
+    left: 480px;
+  }
+}
+@media (min-width: 1024px) {
+  .plats .plats-card .prix {
+    left: 790px;
+  }
 }
 .plats .plats-card .card-checkbox:checked ~ .card-content .selection {
   position: relative;

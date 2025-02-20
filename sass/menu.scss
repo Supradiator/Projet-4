@@ -136,6 +136,11 @@ body {
     margin-top: -55px;
     padding-top: 10px;
 
+    @media(min-width: 768px){
+        padding: 10px 50px 0px 50px;
+        margin: -50px 50px 0px 50px;
+    }
+
     @media(min-width: 1024px){
         padding: 10px 250px 0px 250px;
         margin: -50px 250px 0px 250px;
@@ -185,6 +190,24 @@ body {
 }
 
 // plats-------------------------------------------------------------------------
+
+
+.un {
+    opacity: 0;
+    animation: appear 1000ms forwards;
+}
+.deux {
+    opacity: 0;
+    animation: appear 2000ms forwards;
+}
+.trois {
+    opacity: 0;
+    animation: appear 3000ms forwards;
+}
+
+@keyframes appear {
+    to {opacity: 1;}
+}
 
 .plats {
     font-family: $font-secondary;
@@ -259,6 +282,14 @@ body {
             margin-left: auto;
             position: absolute;
             left: 320px;
+
+            @media(min-width: 768px){
+                left: 480px;
+            }
+
+            @media(min-width: 1024px){
+                left: 790px;
+            }
         }
         .card-checkbox:checked ~ .card-content {
             .selection {
@@ -399,3 +430,4 @@ body {
         padding-right: 10px;
     }
 }
+
