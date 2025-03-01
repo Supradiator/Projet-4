@@ -29,8 +29,7 @@
                     <h3>ENTRÉES</h3>
                     <div class="plats-card">
                         <div class="card">
-                            <input type="checkbox" id="check1" class="card-checkbox">
-                            <label for="check1" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Tartare de poulpe acidulé</h4>
                                     <p>Aux zestes d'orange</p>
@@ -39,11 +38,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check2" class="card-checkbox">
-                            <label for="check2" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Velouté de légumes d'antan</h4>
                                     <p>Carotte, panais, topinambour</p>
@@ -52,11 +50,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check3" class="card-checkbox">
-                            <label for="check3" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Soupe à l'oignon</h4>
                                     <p>Revisitée</p>
@@ -65,7 +62,7 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -73,8 +70,7 @@
                     <h3>PLATS</h3>
                     <div class="plats-card">
                         <div class="card">
-                            <input type="checkbox" id="check4" class="card-checkbox">
-                            <label for="check4" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Coquilles Saint-Jacques</h4>
                                     <p>Accompagnées d'une purée de panais</p>
@@ -83,11 +79,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check5" class="card-checkbox">
-                            <label for="check5" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Magret de canard</h4>
                                     <p>Et parmentier de pommes de terre</p>
@@ -96,11 +91,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check6" class="card-checkbox">
-                            <label for="check6" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Pigeonneau d’Ille-et-Vilaine</h4>
                                     <p>Sur son lit de gnocchis aux légumes</p>
@@ -109,7 +103,7 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -117,8 +111,7 @@
                     <h3>DESSERT</h3>
                     <div class="plats-card">
                         <div class="card">
-                            <input type="checkbox" id="check7" class="card-checkbox">
-                            <label for="check7" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Pétales de violettes glacés</h4>
                                     <p>Et purée de noisettes</p>
@@ -127,11 +120,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check8" class="card-checkbox">
-                            <label for="check8" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Fondant au chocolat</h4>
                                     <p>Revisité</p>
@@ -140,11 +132,10 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                         <div class="card">
-                            <input type="checkbox" id="check9" class="card-checkbox">
-                            <label for="check9" class="card-content">
+                            <article class="card-content">
                                 <div class="texte">
                                     <h4>Millefeuille croustillant</h4>
                                     <p>Myrtilles et pâte d’amande</p>
@@ -153,7 +144,7 @@
                                 <span class="selection">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
-                            </label>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -180,3 +171,45 @@
         </footer>
     </body>
 </html>
+
+
+.item_check {
+    width: 0%;
+    height: 69px;
+    background-color: var(--Green);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .check {
+    color: transparent;
+    background-color: var(--White);
+    border-radius: 50%;
+    width: 0%;
+    height: 19px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+.item:hover .item_check {
+    width: 20%;
+  }
+ .item:hover .item_check .check {
+    width: 20px;
+    color: var(--Green);
+    background-color: var(--White);
+  }
+  @keyframes progressive {
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

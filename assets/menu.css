@@ -195,9 +195,6 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-.plats .plats-card .card .card-checkbox {
-  display: none;
-}
 .plats .plats-card .card .card-content {
   display: flex;
   justify-content: space-between;
@@ -206,7 +203,7 @@ body {
   position: absolute;
   transform: translateX(70px);
   transition: transform 330ms ease-out;
-  width: 59px;
+  width: 0%;
   margin: -15px -15px -15px 10px;
   border-radius: 0 15px 15px 0;
 }
@@ -239,8 +236,6 @@ body {
   font-size: 15px;
   align-self: flex-end;
   margin-left: auto;
-  position: absolute;
-  left: 320px;
 }
 @media (min-width: 768px) {
   .plats .plats-card .prix {
@@ -252,7 +247,7 @@ body {
     left: 790px;
   }
 }
-.plats .plats-card .card-checkbox:checked ~ .card-content .selection {
+.plats .plats-card .card:hover .selection {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -260,33 +255,26 @@ body {
   background-color: #99E2D0;
   transform: translateX(0px);
   transition: transform 330ms;
+  width: 59px;
 }
-.plats .plats-card .card-checkbox:checked ~ .card-content .selection .fa-circle-check {
+.plats .plats-card .card:hover .selection .fa-circle-check {
   align-self: center;
   color: white;
   font-size: 20px;
 }
-.plats .plats-card .card-checkbox:checked ~ .card-content h4 {
+.plats .plats-card .card:hover h4 {
   max-width: 80%;
 }
-.plats .plats-card .card-checkbox:checked ~ .card-content p {
+.plats .plats-card .card:hover p {
   max-width: 80%;
 }
-.plats .plats-card .card-checkbox:checked ~ .card-content .prix {
-  transform: translateX(-50px);
-  transition: transform 330ms;
-}
-.plats .plats-card .card-checkbox:not(:checked) ~ .card-content .selection {
+.plats .plats-card .card:not(:hover) .selection {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #99E2D0;
   transform: translateX(70px);
-  transition: transform 330ms;
-}
-.plats .plats-card .card-checkbox:not(:checked) ~ .card-content .prix {
-  transform: translateX(0px);
   transition: transform 330ms;
 }
 

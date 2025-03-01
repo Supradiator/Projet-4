@@ -1,72 +1,7 @@
 // variables-----------------------------------------------
 
-$font-primary: 'Shrikhand', cursive;
-$font-secondary: 'Roboto', sans-serif;
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$light-gray: #EAEAEA;
-$dark-gray: #353535;
-$background: #F6F6F6;
-$light-green: #99E2D0;
-
-@mixin desktop-image {
-    @media(min-width: 1024px){
-        height: 500px;
-        background-position: center -450px;
-    }
-}
-
-@mixin background-image {
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 275px;
-}
-
-@mixin column-center {
-    @include center;
-    flex-direction: column;
-}
-
-@mixin shadow {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@mixin margin-twenty {
-    margin: 20px;
-}
-
-@mixin no-margin {
-    margin: 0;
-}
-
-@mixin font-center {
-    text-align: center;
-}
-
-@mixin font-medium {
-    font-weight: 500;
-}
-
-@mixin font-regular {
-    font-weight: 400;
-}
-
-@mixin font-light {
-    font-weight: 300;
-}
-
-@mixin font-sixteen {
-    font-size: 16px;
-}
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@use "_variables" as *;
+@use "_mixins" as *;
 
 // body --------------------------------------------
 
@@ -176,13 +111,13 @@ body {
         }
     }
     .heart-filled {
-        opacity: 0;
+        opacity: $none;
         background: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
         color: transparent;
     }
     .toggle-checkbox:checked + .toggle-label .heart-empty {
-        opacity: 0;
+        opacity: $none;
     }
     .toggle-checkbox:checked + .toggle-label .heart-filled {
         opacity: 1;
@@ -193,15 +128,15 @@ body {
 
 
 .un {
-    opacity: 0;
+    opacity: $none;
     animation: appear 1000ms forwards;
 }
 .deux {
-    opacity: 0;
+    opacity: $none;
     animation: appear 2000ms forwards;
 }
 .trois {
-    opacity: 0;
+    opacity: $none;
     animation: appear 3000ms forwards;
 }
 
@@ -233,9 +168,6 @@ body {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             overflow: hidden;
-            .card-checkbox {
-                display: none;
-            }
             .card-content {
                 display: flex;
                 justify-content: space-between;
@@ -244,15 +176,13 @@ body {
                 position: absolute;
                 transform: translateX(70px);
                 transition: transform 330ms ease-out;
-                width: 59px;
+                width: 0%;
                 margin: -15px -15px -15px 10px;
                 border-radius: 0 15px 15px 0;
                 .fa-circle-check {
                     color: transparent;
                 }
             }
-            
-            
         }
         .texte {
             width: 100%;
@@ -280,8 +210,6 @@ body {
             font-size: 15px;
             align-self: flex-end;
             margin-left: auto;
-            position: absolute;
-            left: 320px;
 
             @media(min-width: 768px){
                 left: 480px;
@@ -291,7 +219,7 @@ body {
                 left: 790px;
             }
         }
-        .card-checkbox:checked ~ .card-content {
+        .card:hover {
             .selection {
                 position: relative;
                 display: flex;
@@ -300,6 +228,7 @@ body {
                 background-color: $light-green;
                 transform: translateX(0px);
                 transition: transform 330ms;
+                width: 59px;
                 .fa-circle-check {
                     align-self: center;
                     color: white;
@@ -312,12 +241,8 @@ body {
             p {
                 max-width: 80%;
             }
-            .prix {
-                transform: translateX(-50px);
-                transition: transform 330ms;
-            }
         }
-        .card-checkbox:not(:checked) ~ .card-content {
+        .card:not(:hover) {
             .selection {
                 position: relative;
                 display: flex;
@@ -325,10 +250,6 @@ body {
                 justify-content: center;
                 background-color: $light-green;
                 transform: translateX(70px);
-                transition: transform 330ms;
-            }
-            .prix {
-                transform: translateX(0px);
                 transition: transform 330ms;
             }
         }
