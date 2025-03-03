@@ -198,14 +198,16 @@ body {
 .plats .plats-card .card .card-content {
   display: flex;
   justify-content: space-between;
+  transition: gap 330ms ease-out;
 }
 .plats .plats-card .card .selection {
   position: absolute;
-  transform: translateX(70px);
-  transition: transform 330ms ease-out;
-  width: 0%;
+  min-width: 0%;
   margin: -15px -15px -15px 10px;
   border-radius: 0 15px 15px 0;
+  transform: translateX(70px);
+  transition: transform 330ms ease-out;
+  overflow: hidden;
 }
 .plats .plats-card .card .selection .fa-circle-check {
   color: transparent;
@@ -253,9 +255,9 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: #99E2D0;
+  min-width: 59px;
   transform: translateX(0px);
-  transition: transform 330ms;
-  width: 59px;
+  transition: transform 330ms, min-width 330ms ease-out;
 }
 .plats .plats-card .card:hover .selection .fa-circle-check {
   align-self: center;
