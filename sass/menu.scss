@@ -7,6 +7,7 @@
 
 body {
     @include no-margin;
+    min-width: 320px;
 }
 
 // header --------------------------------------------
@@ -68,8 +69,10 @@ body {
 .menu {
     background-color: $background;
     border-radius: 50px 50px 0 0;
-    margin-top: -55px;
-    padding-top: 10px;
+    max-width: 100%;
+    padding: 10px 5%;
+    margin-top: -30px;
+    transition: all 0.3s ease-in-out;
 
     @media(min-width: 768px){
         padding: 10px 50px 0px 50px;
@@ -252,7 +255,7 @@ body {
                 justify-content: center;
                 background-color: $light-green;
                 transform: translateX(70px);
-                transition: transform 330ms;
+                transition: transform 330ms, min-width 330ms ease-out;
             }
         }
     }
