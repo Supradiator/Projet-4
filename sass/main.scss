@@ -7,8 +7,8 @@
 
 .loader-container {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: $none;
+    left: $none;
     width: 100%;
     height: 100%;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 .main-page {
-    opacity: 0;
+    opacity: $none;
     animation: appear 1s forwards;
     animation-delay: 1s;
 }
@@ -49,6 +49,7 @@
 
 body {
     @include no-margin;
+    min-width: 320px
 }
 
 // header --------------------------------------------
@@ -57,8 +58,8 @@ body {
     @include center;
     @include margin-twenty;
 
-    @media(min-width: 1024px){
-        margin: 30px 20px;
+    @include responsive(1024px){
+        margin: $spacing-large $spacing-medium;
     }
 }
 
@@ -66,13 +67,13 @@ body {
 
 .form {
     @include center;
-    box-shadow: inset 0 23px 4px -20px rgba(0,0,0,0.1);
+    box-shadow: inset $none 23px 4px -20px rgba(0,0,0,0.1);
     background-color: $light-gray;
-    padding: 20px;
+    padding: $spacing-medium;
 
-    @media(min-width: 768px){
+    @include responsive(768px){
         box-shadow: none;
-        padding: 15px 20px;
+        padding: 15px $spacing-medium;
     }
 
     input {
@@ -97,20 +98,20 @@ body {
 .main-text {
     @include center;
     @include font-center;
-    box-shadow: inset 0 30px 4px -25px rgba(0,0,0,0.2);
+    box-shadow: inset $none $spacing-large 4px -25px rgba(0,0,0,0.2);
     background-color: $background;
     font-family: $font-secondary;
     flex-direction: column;
-    padding: 20px 0px 40px 0px;
+    padding: $spacing-medium $none 40px $none;
 
-    @media(min-width: 768px){
+    @include responsive(768px){
         box-shadow: none;
     }
     h1 {
-        margin: 20px 60px 0px 60px;
+        margin: $spacing-medium 60px $none 60px;
         font-size: 24px;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             font-size: 40px;
             margin-bottom: 15px;
         }
@@ -118,8 +119,8 @@ body {
     p {
         @include font-light;
         color: $dark-gray;
-        margin: 10px 20px;
-        font-size: 18px;
+        margin: $spacing-small $spacing-medium;
+        font-size: $font-size-medium;
     }
     button {
         @include margin-twenty;
@@ -127,7 +128,7 @@ body {
         @include font-sixteen;
         @include font-regular;
         border-radius: 50px;
-        padding: 17px 20px;
+        padding: 17px $spacing-medium;
         background: linear-gradient($color-secondary, $color-primary);
         border: none;
         color: white;
@@ -135,10 +136,10 @@ body {
         transition: box-shadow 400ms;
         &:hover {
             background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
-            box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
+            box-shadow: $none 3px $spacing-small 1px rgba(0, 0, 0, 0.4);
         }
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             padding: 15px 25px;
         }
     }
@@ -148,14 +149,14 @@ body {
 
 .section-fonctionnement {
 
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         @include center;
     }
     .div-fonctionnement {
-        margin: 50px 0px 50px 20px;
+        margin: 50px $none 50px $spacing-medium;
         font-family: $font-secondary;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             width: 60%;
         }
         .steps {
@@ -163,7 +164,7 @@ body {
             flex-direction: column;
             gap: 25px;
 
-            @media(min-width: 1024px){
+            @include responsive(1024px){
                 flex-direction: row;
                 gap: 40px;
             }
@@ -172,7 +173,7 @@ body {
             position: relative;
             width: 100%;
 
-            @media(min-width: 1024px){
+            @include responsive(1024px){
                 flex: 1;
                 max-width: 30%;
             }
@@ -188,11 +189,11 @@ body {
                 color: white;
                 font-size: 14px;
 
-                @media(min-width: 768px){
+                @include responsive(768px){
                     left: 60px;
                 }
 
-                @media(min-width: 1024px){
+                @include responsive(1024px){
                     left: -15px;
                 }
             }
@@ -204,31 +205,31 @@ body {
                 border: none;
                 font-family: $font-secondary;
                 padding: 25px;
-                margin-bottom: 10px;
+                margin-bottom: $spacing-small;
                 width: 90%;
-                border-radius: 20px;
+                border-radius: $spacing-medium;
 
-                @media(min-width: 768px){
+                @include responsive(768px){
                     width: 80%;
                 }
 
-                @media(min-width: 1024px){
+                @include responsive(1024px){
                     width: 100%;
                 }
             }
             .fa-solid {
-                font-size: 18px;
+                font-size: $font-size-medium;
                 position: absolute;
                 left: 50px;
                 color: #7E7E7E;
 
-                @media(min-width: 768px){
+                @include responsive(768px){
                     left: 200px;
                 }
 
-                @media(min-width: 1024px){
-                    left: 30px;
-                    font-size: 20px;
+                @include responsive(1024px){
+                    left: $spacing-large;
+                    font-size: $spacing-medium;
                 }
             }
             .fa-store {
@@ -240,42 +241,42 @@ body {
 // Restaurants ---------------------------------------------------------------
 .section-restaurants {
 
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         background-color: $background;
         @include center;
     }
     .div-restaurants {
-        padding: 40px 0px;
+        padding: 40px $none;
         background-color: $background;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             padding-left: 15px;
-            padding-top: 0px;
+            padding-top: $none;
             width: 60%;
         }
         .cards-title {
             font-family: $font-secondary;
-            padding: 0px 20px;
+            padding: $none $spacing-medium;
 
-            @media(min-width: 1024px){
-                padding-left: 0px;
+            @include responsive(1024px){
+                padding-left: $none;
             }
         }
         .cards {
             @include column-center;
-            gap: 20px;
+            gap: $spacing-medium;
 
-            @media(min-width: 768px){
+            @include responsive(768px){
                 flex-direction: row;
                 flex-wrap: wrap;
                 width: 100%;
             }
-            @media(min-width: 1024px){
+            @include responsive(1024px){
                 justify-content: space-between;
             }
             .menu-link {
                 position: absolute;
-                inset: 0;
+                inset: $none;
                 text-decoration: none;
                 color: inherit;
                 z-index: 10;
@@ -289,7 +290,7 @@ body {
                 overflow: hidden;
                 border-radius: 15px;
 
-                @media(min-width: 768px){
+                @include responsive(768px){
                     width: 45%;
                 }
                 img {
@@ -298,26 +299,26 @@ body {
                     object-fit: cover;
                     object-position: bottom;
 
-                    @media(min-width: 1024px){
+                    @include responsive(1024px){
                         object-position: center -100px;
                     }
                 }
                 .charonne {
                     object-position: center -160px;
 
-                    @media(min-width: 1024px){
+                    @include responsive(1024px){
                         object-position: center -240px;
                     }
                 }
                 .content {
                     height: 30%;
                     width: 100%;
-                    padding-left: 10px;
+                    padding-left: $spacing-small;
                     padding-top: 15px;
                     font-family: $font-secondary;
                     h4 {
                         @include no-margin;
-                        font-size: 18px;
+                        font-size: $font-size-medium;
                         font-weight: bold;
                     }
                     p {
@@ -332,17 +333,17 @@ body {
                     font-family: $font-secondary;
                     @include font-medium;
                     font-size: 14px;
-                    padding: 5px 10px;
+                    padding: 5px $spacing-small;
                     border-radius: 3px;
-                    top: 0px;
-                    right: 10px;
+                    top: $none;
+                    right: $spacing-small;
                 }
                 // animation du coeur-----------------------------------------
                 .toggle-checkbox {
                     display: none;
                 }
                 .toggle-label {
-                    font-size: 22px;
+                    font-size: $font-size-large;
                     position: relative;
                     i {
                         position: absolute;
@@ -351,18 +352,18 @@ body {
                         transition: opacity 0.4s
                     }
 
-                    @media(min-width: 1024px){
+                    @include responsive(1024px){
                         left: 150px;
                     }
                 }
                 .heart-filled {
-                    opacity: 0;
+                    opacity: $none;
                     background: linear-gradient($color-primary, $color-secondary);
                     background-clip: text;
                     color: transparent;
                 }
                 .toggle-checkbox:checked + .toggle-label .heart-empty {
-                    opacity: 0;
+                    opacity: $none;
                 }
                 .toggle-checkbox:checked + .toggle-label .heart-filled {
                     opacity: 1;
@@ -379,57 +380,57 @@ body {
     flex-direction: column;
     background-color: $dark-gray;
     color: white;
-    padding: 20px;
+    padding: $spacing-medium;
 
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         flex-direction: row-reverse;
     }
     .footer-content {
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
         }
     }
     .footer-title {
-        padding-bottom: 10px;
+        padding-bottom: $spacing-small;
     }
     h4 {
         @include font-regular;
         @include no-margin;
         font-family: $font-primary;
-        font-size: 18px;
+        font-size: $font-size-medium;
 
-        @media(min-width: 1024px){
-            padding: 40px 40px 0px 50px;
+        @include responsive(1024px){
+            padding: 40px 40px $none 50px;
         }
     }
     p {
         @include no-margin;
-        margin-top: 10px;
+        margin-top: $spacing-small;
         font-family: $font-secondary;
     }
     .regular {
         @include font-regular;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
-            padding-right: 20px;
+            padding-right: $spacing-medium;
             p {
-                padding: 40px 5px 0px 5px;
+                padding: 40px 5px $none 5px;
             }
         }
     }
     .light {
         @include font-light;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
-            padding-right: 20px;
+            padding-right: $spacing-medium;
             p {
-                padding: 40px 5px 0px 5px;
+                padding: 40px 5px $none 5px;
             }
         }
     }
@@ -440,6 +441,6 @@ body {
         padding-right: 15px;
     }
     .fa-handshake-angle {
-        padding-right: 10px;
+        padding-right: $spacing-small;
     }
 }

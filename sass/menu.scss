@@ -16,19 +16,19 @@ body {
     @include center;
     @include margin-twenty;
 
-    @media(min-width: 1024px){
-        margin: 30px 20px;
+    @include responsive(1024px){
+        margin: $spacing-large $spacing-medium;
     }
 }
 .fa-arrow-left {
     position: absolute;
     font-size: 17px;
-    left: 20px;
-    top: 30px;
+    left: $spacing-medium;
+    top: $spacing-large;
 
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         top: 40px;
-        font-size: 20px;
+        font-size: $spacing-medium;
     }
 }
 
@@ -48,7 +48,7 @@ body {
     @include background-image;
     background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         height: 500px;
         background-position: center;
     }
@@ -68,28 +68,28 @@ body {
 
 .menu {
     background-color: $background;
-    border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px $none $none;
     max-width: 100%;
-    padding: 10px 5%;
+    padding: $spacing-small 5%;
     margin-top: -30px;
     transition: all 0.3s ease-in-out;
 
-    @media(min-width: 768px){
-        padding: 10px 50px 0px 50px;
-        margin: -50px 50px 0px 50px;
+    @include responsive(768px){
+        padding: $spacing-small 50px $none 50px;
+        margin: -50px 50px $none 50px;
     }
 
-    @media(min-width: 1024px){
-        padding: 10px 250px 0px 250px;
-        margin: -50px 250px 0px 250px;
+    @include responsive(1024px){
+        padding: $spacing-small 250px $none 250px;
+        margin: -50px 250px $none 250px;
     }
     .title {
         font-family: $font-primary;
         font-weight: lighter;
         font-size: 28px;
-        padding: 0 15px;
+        padding: $none 15px;
         
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             text-align: center;
         }
     }
@@ -100,7 +100,7 @@ body {
         display: none;
     }
     .toggle-label {
-        font-size: 22px;
+        font-size: $font-size-large;
         position: relative;
         i {
             position: absolute;
@@ -109,7 +109,7 @@ body {
             transition: opacity 0.4s
         }
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             left: 280px;
         }
     }
@@ -149,7 +149,7 @@ body {
 
 .plats {
     font-family: $font-secondary;
-    padding: 0px 15px;
+    padding: $none 15px;
     margin-bottom: 40px;
     h3 {
         @include font-light;
@@ -168,7 +168,7 @@ body {
             width: 92%;
             border-radius: 15px;
             padding: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: $none 4px 8px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             overflow: hidden;
             .card-content {
@@ -179,8 +179,8 @@ body {
             .selection {
                 position: absolute;
                 min-width: 0%;
-                margin: -15px -15px -15px 10px;
-                border-radius: 0 15px 15px 0;
+                margin: -15px -15px -15px $spacing-small;
+                border-radius: $none 15px 15px $none;
                 transform: translateX(70px);
                 transition: transform 330ms ease-out;
                 overflow: hidden;
@@ -193,8 +193,8 @@ body {
             width: 100%;
         }
         h4 {
-            margin: 0px 0px 5px 0px;
-            font-size: 18px;
+            margin: $none $none 5px $none;
+            font-size: $font-size-medium;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -203,7 +203,7 @@ body {
         p {
             @include no-margin;
             @include font-light;
-            font-size: 15px;
+            font-size: $font-size-small;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -212,15 +212,15 @@ body {
         .prix {
             color: $dark-gray;
             font-weight: bold;
-            font-size: 15px;
+            font-size: $font-size-small;
             align-self: flex-end;
             margin-left: auto;
 
-            @media(min-width: 768px){
+            @include responsive(768px){
                 left: 480px;
             }
 
-            @media(min-width: 1024px){
+            @include responsive(1024px){
                 left: 790px;
             }
         }
@@ -237,7 +237,7 @@ body {
                 .fa-circle-check {
                     align-self: center;
                     color: white;
-                    font-size: 20px;
+                    font-size: $spacing-medium;
                 }
             }
             h4 {
@@ -266,7 +266,7 @@ body {
         @include shadow;
         @include font-sixteen;
         @include font-regular;
-        margin: 0px 20px 40px 20px;
+        margin: $none $spacing-medium 40px $spacing-medium;
         border-radius: 50px;
         padding: 15px 50px;
         background: linear-gradient($color-secondary, $color-primary);
@@ -276,10 +276,10 @@ body {
         transition: box-shadow 400ms;
         &:hover {
             background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
-            box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
+            box-shadow: $none 3px 10px 1px rgba(0, 0, 0, 0.4);
         }
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             padding: 15px 40px;
         }
     }
@@ -292,57 +292,57 @@ body {
     flex-direction: column;
     background-color: $dark-gray;
     color: white;
-    padding: 20px;
+    padding: $spacing-medium;
 
-    @media(min-width: 1024px){
+    @include responsive(1024px){
         flex-direction: row-reverse;
     }
     .footer-content {
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
         }
     }
     .footer-title {
-        padding-bottom: 10px;
+        padding-bottom: $spacing-small;
     }
     h4 {
         @include font-regular;
         @include no-margin;
         font-family: $font-primary;
-        font-size: 18px;
+        font-size: $font-size-medium;
 
-        @media(min-width: 1024px){
-            padding: 40px 40px 0px 50px;
+        @include responsive(1024px){
+            padding: 40px 40px $none 50px;
         }
     }
     p {
         @include no-margin;
-        margin-top: 10px;
+        margin-top: $spacing-small;
         font-family: $font-secondary;
     }
     .regular {
         @include font-regular;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
-            padding-right: 20px;
+            padding-right: $spacing-medium;
             p {
-                padding: 40px 5px 0px 5px;
+                padding: 40px 5px $none 5px;
             }
         }
     }
     .light {
         @include font-light;
 
-        @media(min-width: 1024px){
+        @include responsive(1024px){
             display: flex;
             flex-direction: row;
-            padding-right: 20px;
+            padding-right: $spacing-medium;
             p {
-                padding: 40px 5px 0px 5px;
+                padding: 40px 5px $none 5px;
             }
         }
     }
@@ -353,7 +353,7 @@ body {
         padding-right: 15px;
     }
     .fa-handshake-angle {
-        padding-right: 10px;
+        padding-right: $spacing-small;
     }
 }
 

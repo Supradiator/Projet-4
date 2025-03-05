@@ -12,6 +12,13 @@
     height: 275px;
 }
 
+@mixin responsive($size) {
+    @media(min-width: $size) {
+        @content;
+    }
+}
+
+
 @mixin column-center {
     @include center;
     flex-direction: column;
